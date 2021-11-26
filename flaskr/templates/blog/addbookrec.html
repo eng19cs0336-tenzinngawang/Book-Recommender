@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Add Book{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <h1> {{booktitle}} </h1>
+  <form method="post">
+    <label for="rate">Rate (1-10)</label>
+    <input name="rate" id="rate">{{ request.form['rate'] }}</input>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
